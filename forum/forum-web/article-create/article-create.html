@@ -1,0 +1,29 @@
+<link href="../article-create/article-create.css" rel="stylesheet">
+<article class="box-aw form-question">
+    <form id="v-askForm" class="fields-container" method="post">
+        <div class="box field-row">
+            <label class="box-fl f-label">标题</label>
+            <div class="box-aw">
+                <input type="text" name="subject" placeholder="你有什么技术问题，请在此输入" class="f-input">
+            </div>
+        </div>
+        <div class="box field-row">
+            <label class="box-fl f-label">分类</label>
+            <div class="box box-aw">
+                <select ng-repeat="topic in topics" class="f-select">
+                    <option value="{{topic.itemTopicId}}">{{topic.itemTopic}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="box textarea-fow">
+            <label class="box-fl f-label">描述</label>
+            <div class="box box-aw">
+                <textarea class="f-textarea"></textarea>
+            </div>
+        </div>
+        <div class="box">
+            <input class="btn btn-normal btn-info" type="button" value="发表问题">
+        </div>
+    </form>
+</article>

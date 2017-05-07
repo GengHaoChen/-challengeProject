@@ -10,6 +10,14 @@ mainWarp.controller('articleListController', function ($scope, $http, $statePara
         $scope.topics = response.data;
     });
 });
+mainWarp.controller('indexLoadController', function ($state) {
+    $state.go('group');
+});
+mainWarp.controller('articleCreateController', function ($scope, $http) {
+    $http.get('http://127.0.0.1:8081/forum/item/topics').then(function (response) {
+        $scope.topics = response.data;
+    });
+});
 
 
 mainWarp.config(function ($stateProvider) {
@@ -26,5 +34,10 @@ mainWarp.config(function ($stateProvider) {
         url: 'article-list/:itemTopicId',
         templateUrl: '../article-list/article-list.html',
         controller: 'articleListController'
+    });
+    $stateProvider.state('article-create', {
+        url: 'article-create',
+        templateUrl: '../article-create/article-create.html',
+        controller: 'articleCreateController'
     });
 });
