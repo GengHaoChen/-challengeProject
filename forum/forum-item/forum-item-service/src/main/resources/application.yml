@@ -1,0 +1,10 @@
+server:
+  port: 8082
+  context-path: /forum-service
+spring:
+  application:
+    name: forum-item-service
+eureka:
+  client:
+    serviceUrl:
+     defaultZone: http://localhost:8080/eureka/

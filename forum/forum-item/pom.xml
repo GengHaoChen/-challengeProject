@@ -15,6 +15,7 @@
         <module>forum-item-app</module>
         <module>forum-item-service</module>
         <module>forum-item-repository</module>
+        <module>forum-item-service-model</module>
     </modules>
     <packaging>pom</packaging>
 

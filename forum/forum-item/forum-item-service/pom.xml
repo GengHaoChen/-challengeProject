@@ -23,6 +23,16 @@
     </dependencyManagement>
     <dependencies>
         <dependency>
+            <groupId>forum</groupId>
+            <artifactId>forum-item-service-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>forum</groupId>
+            <artifactId>forum-item-repository</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>

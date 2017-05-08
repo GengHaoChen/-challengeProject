@@ -1,7 +1,6 @@
 package forum.item.app.controllers;
 
 import forum.item.app.models.ItemArticle;
-import forum.item.app.models.ItemTopic;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,42 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class ItemController {
-
-    @RequestMapping(value = "/item/topics", method = RequestMethod.GET)
-    public List<ItemTopic> getItemTopics() {
-        List<ItemTopic> itemTitles = new ArrayList<ItemTopic>();
-
-        ItemTopic itemTitle1 = new ItemTopic();
-        itemTitle1.setItemTopic("title1");
-        itemTitle1.setItemTopicId(1L);
-        itemTitles.add(itemTitle1);
-
-        ItemTopic itemTitle2 = new ItemTopic();
-        itemTitle2.setItemTopic("title2");
-        itemTitle2.setItemTopicId(2L);
-        itemTitles.add(itemTitle2);
-
-        ItemTopic itemTitle3 = new ItemTopic();
-        itemTitle3.setItemTopic("title3");
-        itemTitle3.setItemTopicId(3L);
-        itemTitles.add(itemTitle3);
-
-        ItemTopic itemTitle4 = new ItemTopic();
-        itemTitle4.setItemTopic("title4");
-        itemTitle4.setItemTopicId(4L);
-        itemTitles.add(itemTitle4);
-
-        ItemTopic itemTitle5 = new ItemTopic();
-        itemTitle5.setItemTopic("title5");
-        itemTitle5.setItemTopicId(5L);
-        itemTitles.add(itemTitle5);
-
-        return itemTitles;
-    }
-
-    @RequestMapping(value = "/item/{topicId}", method = RequestMethod.GET)
-    public List<ItemArticle> getItemArticles(@PathVariable Long topicId) {
+@RequestMapping("article")
+public class ArticleController {
+    @RequestMapping(value = "{topicId}", method = RequestMethod.GET)
+    public List<ItemArticle> getArticles(@PathVariable Long topicId) {
 
         List<ItemArticle> itemArticles = new ArrayList<ItemArticle>();
         ItemArticle itemArticle1 = new ItemArticle();
@@ -54,7 +21,6 @@ public class ItemController {
         itemArticle1.setItemTopicId(topicId);
         itemArticle1.setArticleTopic("articleTopic1");
         itemArticles.add(itemArticle1);
-
 
         ItemArticle itemArticle2 = new ItemArticle();
         itemArticle2.setArticleId(2L);
@@ -90,4 +56,8 @@ public class ItemController {
     }
 
 
+    @RequestMapping(value = "create", method = RequestMethod.POST)
+    public void create(ItemArticle itemArticle) {
+
+    }
 }
