@@ -29,6 +29,11 @@
         </dependency>
         <dependency>
             <groupId>forum</groupId>
+            <artifactId>forum-item-search-repository</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>forum</groupId>
             <artifactId>forum-item-repository</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
