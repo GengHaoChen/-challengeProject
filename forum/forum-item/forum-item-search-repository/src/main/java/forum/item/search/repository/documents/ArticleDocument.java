@@ -2,7 +2,7 @@ package forum.item.search.repository.documents;
 
 public class ArticleDocument {
 
-    private Long articleId;
+    private String articleId;
 
     private String articleTitle;
 
@@ -17,12 +17,12 @@ public class ArticleDocument {
     private String authorId;
 
 
-    public Long getArticleId() {
-        return articleId;
+    public void setArticleId(String articleId) {
+        this.articleId = articleId;
     }
 
-    public void setArticleId(Long articleId) {
-        this.articleId = articleId;
+    public String getArticleId() {
+        return articleId;
     }
 
     public String getArticleTitle() {

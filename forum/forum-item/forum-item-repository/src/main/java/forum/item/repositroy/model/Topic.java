@@ -1,4 +1,6 @@
 package forum.item.repositroy.model;
 
-public class Topic {
+import cn.geng.foundation.core.models.BaseModel;
+
+public class Topic extends BaseModel {
 }
